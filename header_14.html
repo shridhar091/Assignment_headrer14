@@ -4,247 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Headers_14</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
+    <link href="style.css" rel="stylesheet"/>
   </head>
-  <style type="text/css">
-    body{
-        margin: 0;
-        padding: 0;
-        font-family: 'DM Sans';
-        background-color: #2F1893;
-    }
-    .mainContainer{
-        margin-top: 100px;
-        margin-left: 250px;
-        margin-right: 250px;
-        display: grid;
-        grid-template-rows: max-content max-content;
-        gap: 60px;
-    }
-    .navBar{
-        grid-row-start: 1;
-        grid-row-end: 2;
-        display: flex;
-        flex-direction: row;
-        color: white;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .companyNameDiv{
-        display: flex;
-        flex-direction: row;
-    }
-    .menuDiv{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-    }
-    .purchaseBtn{
-        background-color:#E93A7D;
-        width: 120px;
-        height: 30px;
-        border-radius: 20px;
-        border: none;
-        color: white;
-    }
-    .content{
-        grid-row-start: 2;
-        grid-row-end: 3;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-    .learnMoreBtn{
-        background-color: #E93A7D;
-        width: 157px;
-        height: 50px;
-        border-radius: 30px;
-        border: none;
-        color: white;
-    }
-    .col2{
-        display: flex;
-        justify-content: center;
-    }
-    .signUpFormContainer{
-        height: 570px;
-        width: 470px;
-        background-color: white;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        gap: 10px;
-        padding: 35px;
-        margin-left: 100px;
-    }
-    .inputField{
-        width: 330px;
-        border: solid;
-        border-radius: 30px;
-        border-color: #EBEAED;
-        border-width: 2px;
-        height: 50px;
-        padding: 20px;
-        margin-top: 10px;
-    }
-    .inputField.email::placeholder {
-        font-family: 'DM Sans';
-        font-weight: 400; 
-        font-size: 18px; 
-        line-height: 26px;
-        color: #15143966;
-    }
-    .inputField.password::placeholder {
-        font-family: 'DM Sans';
-        font-weight: 400; 
-        font-size: 18px; 
-        line-height: 26px;
-        color: #15143966;
-    }
-    .checkboxDiv{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-    .checkboxContainer {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .checkboxContainer input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    }
-    .checkmark {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    height: 25px;
-    width: 25px;
-    border-radius: 5px;
-    background-color:#25DAC5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-    .checkboxContainer input:checked ~ .checkmark {
-        background-color:#25DAC5;
-    }
-
-    .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    }
-
-    .checkboxContainer input:checked ~ .checkmark:after {
-    display: block;
-    }
-    .checkboxContainer .checkmark:after {
-    left: 10px;
-    top: 5px;
-    width: 6px;
-    height: 13px;
-    border: solid #1E0E62;
-    border-width: 0 3px 3px 0;
-    border-radius: 2px;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    }
-    .checkboxText{
-        display: flex;
-        margin-top: 5px;
-        font-weight: 400;
-        color: #15143966;
-        font-size: 16px;
-        line-height: 26px;
-    }
-    .signInBtn{
-        width: 330px;
-        height: 50px;
-        border-radius: 30px;
-        border: none;
-        background-color: #482BE7;
-        color: white;
-    }
-    .orDiv{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-items: center;
-        color: gray;
-    }
-    .twitterBtn{
-        width: 330px;
-        height: 50px;
-        border-radius: 30px;
-        border: none;
-        background-color: #1DA1F2;
-        color: white;
-    }
-    .paragraph{
-        width: 363px;
-        height: 160px;
-    }
-  </style>
-  <body>
-    <div class="mainContainer">
-        <div class="navBar">
-            <div class="companyNameDiv">
-                <h4>Startup 3</h4>
+    <body>
+        <div class="mainContainer">
+            <div class="navBar">
+                <div class="companyNameDiv">
+                    <h4>Startup 3</h4>
+                </div>
+                <div class="menuDiv">
+                    <h5 style="color: gray;">Overview</h5>
+                    <h5>Prices</h5>
+                    <h5>Blog</h5>
+                    <h5>Feedback</h5>
+                    <button class="purchaseBtn" style="font-size: 18px;">Purchase</button>
+                </div>
             </div>
-            <div class="menuDiv">
-                <h5 style="color: gray;">Overview</h5>
-                <h5>Prices</h5>
-                <h5>Blog</h5>
-                <h5>Feedback</h5>
-                <button class="purchaseBtn" style="font-size: 18px;">Purchase</button>
-            </div>
-        </div>
-        <div class="content">
-            <div class="col1">
-                <h1 style="font-size: 58px; color: white; font-weight: 700;">Generate</h1>
-                <h1 style="font-size: 58px; color: white; font-weight: 700">Awesome Web</h1>
-                <h1 style="font-size: 58px; color: white; font-weight: 700">Pages</h1>
-                <p class="paragraph" style="font-size: 22px; color: white; margin-top: 20px; font-weight: 500">The most important part of the Startup is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks.</p>
-                <button class="learnMoreBtn" style="margin-top: 30px; font-size: 18px;">Learn More</button>
-            </div>
-            <div class="col2">
-                <div class="signUpFormContainer">
-                    <h1 style="font-family: DM Sans; font-weight: 700; font-size: 42px; line-height: 52px; letter-spacing: -0.4px; align-items: center; color:#1E0E62;">Sign Up Now</h1>
-                    <input type="text" class="inputField email" placeholder="Your email" style="margin-top: 12px;"/>
-                    <input type="password" class="inputField password" placeholder="Your password"/>
-                    <div class="checkboxDiv">
-                        <label class="checkboxContainer">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                        <h6 class="checkboxText">I agree to terms and conditions</h6></div>
-                    <button class="signInBtn" style="margin-top: 10px;">Sign In</button>
-                    <div class="orDiv"><hr style="width: 100px;">or<hr style="width: 100px;"></div>
-                    <button class="twitterBtn">Login via Twitter</button>
-                    <h6 style="margin-top: 10px; font-size: 18px; color: #15143966; font-weight: 500;">Do you have an Account? <span style="color: #25DAC5;">Sign In</span></h6>
+            <div class="content">
+                <div class="col1">
+                    <h1 style="font-size: 58px; color: white; font-weight: 700;">Generate</h1>
+                    <h1 style="font-size: 58px; color: white; font-weight: 700">Awesome Web</h1>
+                    <h1 style="font-size: 58px; color: white; font-weight: 700">Pages</h1>
+                    <p class="paragraph" style="font-size: 22px; color: white; margin-top: 20px; font-weight: 500">The most important part of the Startup is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks.</p>
+                    <button class="learnMoreBtn" style="margin-top: 30px; font-size: 18px;">Learn More</button>
+                </div>
+                <div class="col2">
+                    <div class="signUpFormContainer">
+                        <h1 style="font-family: DM Sans; font-weight: 700; font-size: 42px; line-height: 52px; letter-spacing: -0.4px; align-items: center; color:#1E0E62;">Sign Up Now</h1>
+                        <input type="text" class="inputField email" placeholder="Your email" style="margin-top: 12px;"/>
+                        <input type="password" class="inputField password" placeholder="Your password"/>
+                        <div class="checkboxDiv">
+                            <label class="checkboxContainer">
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <h6 class="checkboxText">I agree to terms and conditions</h6></div>
+                        <button class="signInBtn" style="margin-top: 10px;">Sign In</button>
+                        <div class="orDiv"><hr style="width: 100px;">or<hr style="width: 100px;"></div>
+                        <button class="twitterBtn">Login via Twitter</button>
+                        <h6 style="margin-top: 10px; font-size: 18px; color: #15143966; font-weight: 500;">Do you have an Account? <span style="color: #25DAC5;">Sign In</span></h6>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script>
-       
-    </script>
-  </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script>
+        
+        </script>
+    </body>
 </html>
