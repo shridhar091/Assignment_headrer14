@@ -5,3 +5,5 @@ You can get the HTML file from the index.html, Where you get the HTML code and s
 In style.css file you get the 80% of stlying of the page. That is a EXTERNAL CSS.
 
 I deployed this page live also you can get this page from this link:- https://vercel.com/shridhar091s-projects/assignment 
+----------------------------------------------------or-------------------------------------------------------------------
+use this link:-https://shridhar091.github.io/Assignment_headrer14/
